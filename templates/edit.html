@@ -1,0 +1,152 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<!--<form action="" method="POST" >-->
+<!--     {% csrf_token %}-->
+<!--    <div class="inputfield">-->
+<!--           <label for="examplename">Patient Name</label>-->
+<!--           {{form.name}}-->
+<!--        </div> -->
+
+
+<!--    <div class="form-group">-->
+<!--          <label for="examplenumber"  >Patient Phonenumber:</label>-->
+<!--          {{form.phonenumber}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--          <label for="exampleyears"  >Patient Age:</label>-->
+<!--           {{form.age}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--          <label for="examplegender"  >Gender</label>-->
+<!--          {{form.gender}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--          <label for="exampletemp"  >Temp:</label>-->
+<!--          {{form.temp}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--          <label for="exampleB.P"  >B.P:</label>-->
+<!--        {{form.bp}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--          <label for="examplePulserate"  >Pulse Rate:</label>-->
+<!--          {{form.pulserate}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--          <label for="examplesugerF"  >Suger(F):</label>-->
+<!--          {{form.sugarf}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--          <label for="examplesugerPP"  >Suger(PP):</label>-->
+<!--           {{form.sugarpp}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--          <label for="examplediagnosis"  >Diagnosis:</label>-->
+<!--         {{form.diagnosis}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--          <label for="examplemedicines"  >medicines</label>-->
+<!--           {{form.medicine}}-->
+<!--      </div>-->
+
+
+<!--    <input type="submit" name='submit'>-->
+<!--</form>-->
+
+
+<div class="wrapper">
+  <div class="title">
+    Patients Details Form
+  </div>
+  <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    <div class="form">
+      <div class="inputfield">
+        <label for="examplename">Patient Name</label>
+        {{form.name}}
+      </div>
+      <div class="inputfield">
+        <label for="examplenumber">Patient Phonenumber</label>
+        {{form.phonenumber}}
+      </div>
+      <div class="inputfield">
+        <label for="exampleyears">Patient Age</label>
+        {{form.age}}
+      </div>
+      <div class="inputfield">
+        <label for="examplegender">Gender</label>
+        {{form.gender}}
+        <!--<div class="custom_select">-->
+        <!--  <select>-->
+        <!--    <option value="">Select</option>-->
+        <!--    <option id="examplegender" name="examplegender" value="Male">Male</option>-->
+        <!--    <option name="examplegender" value="Female">Female</option>-->
+        <!--  </select>-->
+        <!--</div>-->
+      </div>
+      <div class="inputfield">
+        <label for="exampletemp">Temp</label>
+        {{form.temp}}
+      </div>
+      <div class="inputfield">
+        <label for="exampleB.P">B.P</label>
+        {{form.bp}}
+      </div>
+
+      <div class="inputfield">
+        <label for="examplePulserate">Pulse Rate</label>
+        {{form.pulserate}}
+      </div>
+      <div class="inputfield">
+        <label for="examplesugerF">Suger(F)</label>
+        {{form.sugarf}}
+      </div>
+      <div class="inputfield">
+        <label for="examplesugerPP">Suger(PP)</label>
+        {{form.sugarpp}}
+      </div>
+
+      <div class="inputfield">
+        <label for="examplediagnosis">Diagnosis</label>
+        {{form.diagnosis}}
+      </div>
+      <div class="inputfield">
+        <label for="examplemedicines">medicines</label>
+        {{form.medicine}}
+      </div>
+
+       <div class="inputfield">
+        <label for="examplereference">Reference</label>
+        {{form.reference}}
+      </div>
+
+      <!--<div class="inputfield">-->
+      <!--  <label for="add_image">Reports</label>-->
+      <!--<img src="{{form.image.url}}" width="100" height="100">-->
+       <!-- {{form.image.url}}-->
+        <!--<input type="file" name="file[]" id="input-id"  class="file" data-preview-file-type="text" multiple><br>-->
+      <!--  {% for j in form1  %}-->
+        
+      <!--  <img src="{{j.image.url}}" width="100" height="100" style="margin-left:50px"> -->
+        
+      <!--  {% endfor %}-->
+      <!--    {{form1.as_p}}-->
+          
+
+      <!--</div>-->
+
+
+      <div class="inputfield">
+        <input type="submit" value="Submit" class="btn">
+      </div>
+    </div>
+  </form>
+
+</div>
+
+{% endblock %}
+

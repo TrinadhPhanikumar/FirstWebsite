@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for message in messages %}
+    <strong style='color:green ; text-align:center'>
+        <h4>{{message}}</h3>
+    </strong>
+    {% endfor %}
+    <form action="register" method="post" class="container" style="padding:0px">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">UserName:</label>
+            <input type="text" class="form-control" id="username" name="username">
+
+        </div>
+        <div class="form-group">
+            <label for="Password1">Password</label>
+            <input type="password" class="form-control" id="Password1" name="password">
+        </div>
+        <div class="form-group">
+            <label for="Password2">Confirm password</label>
+            <input type="password" class="form-control" id="Password2" name="password2">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>
